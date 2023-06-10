@@ -1,0 +1,229 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+@font-face {
+    font-family: "Poppins";
+    src: url(/assets/fonts/Poppins-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Poppins";
+    src: url(/assets/fonts/Poppins-Bold.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Poppins";
+    src: url(/assets/fonts/Poppins-BoldItalic.ttf);
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Bolder Poppins";
+    src: url(/assets/fonts/Poppins-ExtraBold.ttf);
+    font-weight: bolder;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Poppins";
+    src: url(/assets/fonts/Poppins-ExtraBoldItalic.ttf);
+    font-weight: bolder;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Poppins";
+    src: url(/assets/fonts/Poppins-Italic.ttf);
+    font-weight: normal;
+    font-style: italic;
+}
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --Offwhite: hsl(0, 0%, 94%);
+    --light-grey: hsl(0, 0%, 86%);
+    --smokey-grey: hsl(0, 1%, 44%);
+    --off-black: hsl(0, 0%, 8%);
+    --Purple: hsl(259, 100%, 65%);
+    --Light-red: hsl(0, 100%, 67%);
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: "Poppins", Georgia, 'Times New Roman', Times, serif;
+    background-color: var(--Offwhite);
+    display: flex;
+    align-items: center;
+   
+}
+div, p{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+section {
+    width: 90%;
+    height: 85%;
+    margin: auto;
+    padding:3rem 1rem;
+    background-color: var(--white);
+    border-radius:1rem;
+    border-bottom-right-radius: 5rem;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;   
+}
+
+.container {
+    width: 30%;
+}
+
+label {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: var(--smokey-grey);
+    text-transform: uppercase;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 1rem 0.5rem;
+    border-radius: 5px;
+    border: 1px solid var(--light-grey);
+    font-size: 1.2rem;
+    margin-top: 5px;
+    font-weight: bold;
+    color: var(--smokey-grey);
+    background-color: var(--white);
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid var(--Purple);
+    color: var(--off-black);
+    background-color: var(--white);
+}
+
+
+.shape-holder {
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+.horizontal-line {
+    width: 100%;
+    height: 1px;
+    background-color: var(--light-grey);
+    margin: 3rem 0;
+}
+
+.calc-btn {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 0 auto;
+    background-color: var(--Purple);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position:absolute;
+    top: 20px;
+    right:40%;
+    cursor: pointer;
+    border: 0;
+}
+.calc-btn:hover, .calc-btn:active, .calc-btn:focus {
+    background-color: var(--off-black);
+}
+
+img{
+    width: 50%;
+}
+
+.txt {
+    width: 100%;
+    font-size: 2.5rem;
+    font-family: "Bolder Poppins";
+    font-weight:bolder;
+    font-style: italic;
+    color: var(--off-black);
+}
+span{
+    color: var(--Purple);
+    margin-right: 0.5rem;
+    font-weight: 3rem;
+}
+
+.error-message {
+    color: var(--Light-red);
+    font-size: 0.5rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-top: 0.3rem;
+}
+
+
+
+@media screen and (min-width: 500px) {
+    section {
+        width: 80%;
+        margin: auto;
+    }
+   
+    .shape-img-holder {
+        right: 0;
+    }
+    .txt {
+        font-size: 3rem;
+    }
+    span{
+        font-size: 3.5rem;
+    }
+    .error-message {
+        font-size: 0.7rem;
+        
+    }
+    
+    
+}
+
+@media screen and (min-width: 768px) {
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    section {
+        width: 50%;
+        padding:3rem 2rem;
+        background-color: var(--white);
+        border-radius:1rem;
+        border-bottom-right-radius: 5rem;
+    }
+    form {
+        max-width: 500px;  
+    }
+    .horizontal-line {
+        margin: 2rem 0;
+    }  
+    .calc-btn {
+        top: 4px;
+        right:0;
+    }  
+    .txt {
+        font-size: 3.8rem;
+    }
+   
+
+}
